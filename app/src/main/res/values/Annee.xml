@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Annee_Scolaire">
+        <item>CP</item>
+        <item>CE1</item>
+        <item>CE2</item>
+        <item>CM1</item>
+        <item>CM2</item>
+        <item>Sixieme</item>
+        <item>Cinquieme</item>
+        <item>Quatrieme</item>
+        <item>Troisieme</item>
+        <item>Seconde</item>
+        <item>Premiere</item>
+        <item>Terminale</item>
+    </string-array>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Matiere">
+        <item>Mathématique</item>
+        <item>Géographie</item>
+        <item>Chimie</item>
+        <item>Français</item>
+        <item>Anglais</item>
+        <item>Biologie</item>
+        <item>Histoire</item>
+    </string-array>
+</resources>

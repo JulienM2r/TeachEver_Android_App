@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TeachEver</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="Eleves">Eleve</string>
+    <string name="Parent">Parent</string>
+    <string name="Eleve">eleve</string>
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="annee_scolaire">Année Scolaire</string>
+    <string name="action_favorite">action</string>
+    <string name="action_settings">action_setting</string>
+</resources>
