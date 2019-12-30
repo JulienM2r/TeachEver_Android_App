@@ -1,7 +1,13 @@
 package um2.ips.teachever.Entities;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class Abonnement {
-    private String type;
+    @PrimaryKey
+    private String Type;
+    private String Duree;
     private Double Montant;
 
 }

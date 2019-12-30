@@ -1,15 +1,11 @@
 package um2.ips.teachever.Events;
 
 import android.app.AlertDialog;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -19,7 +15,6 @@ import android.widget.Toast;
 import um2.ips.teachever.Entities.Eleve;
 import um2.ips.teachever.Entities.Parent;
 import um2.ips.teachever.R;
-import um2.ips.teachever.bdd.tabEleveController;
 import um2.ips.teachever.bdd.tabParentController;
 
 public class OnClickListenerCreateUser implements View.OnClickListener {
@@ -61,8 +56,8 @@ public class OnClickListenerCreateUser implements View.OnClickListener {
 
         new AlertDialog.Builder(context)
                 .setView(formElementsView)
-                .setTitle("Create Student")
-                .setPositiveButton("Créer", new DialogInterface.OnClickListener() {
+                .setTitle("Create User")
+                .setPositiveButton("Inscription", new DialogInterface.OnClickListener() {
 
                 public void onClick(DialogInterface dialog, int id) {
 
@@ -76,7 +71,7 @@ public class OnClickListenerCreateUser implements View.OnClickListener {
                     if (RadioEleve.isChecked()) {
                         String Annee = spinnerUserCreate.toString();
                         Eleve eleve = new Eleve(UserLastname, UserFirstname, UserEmail, UserPassword, Annee);
-                        boolean createSuccessful = new tabEleveController(context).create(eleve);
+                        boolean createSuccessful = new EleveDAO(context).create(eleve);
                         if(createSuccessful){
                             Toast.makeText(context, "Eleve information was saved.", Toast.LENGTH_SHORT).show();
                         }else{

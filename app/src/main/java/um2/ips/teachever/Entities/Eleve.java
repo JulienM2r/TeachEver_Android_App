@@ -1,14 +1,37 @@
 package um2.ips.teachever.Entities;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.Index;
+import androidx.room.PrimaryKey;
+
 import java.sql.Date;
+import java.util.UUID;
 
 /**
  * Création d'un um2.ips.teachever.Entities.Eleve pour utilisation  de SQLite sous Android
  */
+
+@Entity(tableName = Eleve.TABLE_NAME)
 public class Eleve {
-    private int id;
+
+    /** The name of the Eleve table. */
+    public static final String TABLE_NAME = "eleves";
+    /** The name of the Email column. */
+    public static final String COLUMN_Email = "email";
+
+
+    @PrimaryKey
+    private String id;
     private String nom;
     private String prenom;
+    public String name;
+
+    /** The email of the Eleve. */
+//    @NonNull
+    @ColumnInfo(name = COLUMN_Email)
     private String Email;
     private String password;
     private String AnneeScolaire;
@@ -17,19 +40,35 @@ public class Eleve {
 
     public Eleve(){}
 
-    public Eleve(String nom, String prenom, String email, String password, String Annee) {
+    @Ignore
+    public Eleve(String nom, String prenom, String email, String password, String Annee, Abonnement Abonnement) {
+        this.id = UUID.randomUUID().toString();
         this.nom = nom;
         this.prenom = prenom;
         this.Email = email;
         this.password = password;
         this.AnneeScolaire = Annee;
+        this.Abonnement = Abonnement;
     }
 
-    public int getId() {
+
+
+    public Eleve(String id, String nom, String prenom, String email, String password, String Annee, Abonnement Abonnement) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.Email = email;
+        this.password = password;
+        this.AnneeScolaire = Annee;
+        this.Abonnement = Abonnement;
+    }
+
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -71,6 +110,12 @@ public class Eleve {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public um2.ips.teachever.Entities.Abonnement getAbonnement() {return Abonnement;
+    }
+    public void setAbonnement(um2.ips.teachever.Entities.Abonnement abonnement) {
+        this.Abonnement = abonnement;
     }
 
 }
