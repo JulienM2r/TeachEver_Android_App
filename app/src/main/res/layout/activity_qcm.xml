@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <include layout="@layout/my_toolbar"/>
+
+
+  <RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal" android:layout_centerHorizontal="true" android:background="@color/design_default_color_primary" android:layout_below="@+id/my_toolbar" android:id="@+id/LayoutUnExo">
+
+  <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/buttonExoPrecedent" android:text="Exo Précédent" android:layout_marginTop="9dp" android:layout_marginLeft="5dp" android:layout_alignParentLeft="true"/>
+
+  <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/buttonExoSuivant" android:text="Exo Suivant" android:layout_marginTop="9dp" android:layout_marginRight="5dp" android:layout_alignParentRight="true"/>
+
+  <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_below="@+id/buttonExoPrecedent" android:id="@+id/textViewlayoutCoursName" android:text="Exercice" android:layout_marginTop="5dp" android:textAppearance="@style/TextAppearance.AppCompat.Large" android:padding="1dp" android:gravity="center"/>
+
+</RelativeLayout>
+
+
+  <RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_centerHorizontal="true" android:layout_below="@+id/LayoutUnExo" android:id="@+id/LayoutQuestion">
+
+  <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/textViewQuestions" android:text="Question" android:layout_marginTop="5dp" android:textAppearance="@style/TextAppearance.AppCompat.Large" android:padding="1dp" android:gravity="center"/>
+
+  <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_below="@+id/textViewQuestions" android:id="@+id/textViewQuestionCorp" android:text="Question Text" android:layout_marginTop="5dp" android:textAppearance="@style/TextAppearance.AppCompat.Large" android:padding="1dp" android:gravity="center"/>
+
+  <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_below="@+id/textViewQuestionCorp" android:id="@+id/textViewSolution" android:text="Solution" android:layout_marginTop="5dp" android:textAppearance="@style/TextAppearance.AppCompat.Large" android:padding="1dp" android:gravity="center" android:visibility="invisible"/>
+
+  <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_below="@+id/textViewSolution" android:id="@+id/textViewSolutionCorp" android:text="Solution Text" android:layout_marginTop="5dp" android:textAppearance="@style/TextAppearance.AppCompat.Large" android:padding="1dp" android:gravity="center" android:visibility="invisible"/>
+
+</RelativeLayout>
+
+
+  <RelativeLayout android:layout_height="80dp" android:layout_width="match_parent" android:orientation="horizontal" android:layout_centerHorizontal="true" android:background="@color/design_default_color_primary" android:id="@+id/LayoutExo" android:layout_marginBottom="45dp" android:layout_alignParentBottom="true">
+
+  <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_centerHorizontal="true" android:id="@+id/CoursExo" android:text="Voir la Solution" android:layout_marginTop="9dp"/>
+
+</RelativeLayout>
+
+</RelativeLayout>
